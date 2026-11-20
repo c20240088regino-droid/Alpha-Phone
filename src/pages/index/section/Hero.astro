@@ -1,0 +1,173 @@
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO ALPHA-PHONE</p>
+
+    <h1>
+      Innovation
+      <br />
+      in Your <span>Hands.</span>
+    </h1>
+
+    <p class="description">
+      Experience the next generation of mobile technology. Discover smartphones
+      designed for performance, style, and everyday innovation.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#products" class="btn-primary">
+        Explore Phones →
+      </a>
+
+      <a href="#about" class="btn-secondary">
+        Discover More
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <strong>Premium</strong>
+        <small>Phone Quality</small>
+      </div>
+      <div>
+        <strong>Modern</strong>
+        <small>Technology</small>
+      </div>
+      <div>
+        <strong>Reliable</strong>
+        <small>Performance</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="/images/alpha-phone.png" alt="Alpha-Phone smartphone" />
+    <div class="image-label">ALPHA SERIES</div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 85vh;
+    background: #080808;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 50px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .eyebrow {
+    color: #ff8a24;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 1.05;
+    margin: 25px 0;
+    font-weight: 800;
+  }
+
+  h1 span {
+    color: #ff8a24;
+  }
+
+  .description {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 470px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+  }
+
+  .hero-buttons a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .btn-primary {
+    background: #ff8a24;
+    color: #080808;
+  }
+
+  .btn-secondary {
+    border: 1px solid #555;
+    color: white;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 65px;
+  }
+
+  .hero-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .hero-stats strong {
+    font-size: 14px;
+  }
+
+  .hero-stats small {
+    color: #777;
+    font-size: 11px;
+  }
+
+  .hero-image {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .image-label {
+    color: #ff8a24;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 70px 6%;
+    }
+
+    .description {
+      margin: auto;
+    }
+
+    .hero-buttons,
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-image {
+      max-width: 300px;
+    }
+  }
+</style>
