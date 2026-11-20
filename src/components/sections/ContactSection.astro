@@ -1,0 +1,121 @@
+<section id="contact" class="contact section-pad">
+  <div class="contact-layout section-inner">
+    <div class="contact-copy reveal">
+      <p class="eyebrow text-fire">GET IN TOUCH</p>
+      <h2>Let’s find your next phone.</h2>
+      <p class="muted-text">
+        Interested in a phone or accessory? Send us a message and tell us what you’re looking for.
+      </p>
+      <div class="contact-note dark-panel">
+        <strong>ALPHA PHONE</strong>
+        <span class="muted-text">Your next upgrade starts here.</span>
+      </div>
+    </div>
+
+    <form id="contactForm" class="contact-form dark-panel reveal">
+      <label for="customerName">Your name</label>
+      <input id="customerName" name="name" type="text" autocomplete="name" required />
+      <label for="customerEmail">Your email</label>
+      <input id="customerEmail" name="email" type="email" autocomplete="email" required />
+      <label for="customerMessage">Message</label>
+      <textarea id="customerMessage" name="message" rows="4" required></textarea>
+      <button class="shop-button" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+      <p class="form-note muted-text">This demo opens your email app to send the inquiry.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact-layout {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .contact-copy h2 {
+    margin: 10px 0;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .contact-copy > p:not(.eyebrow) {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .contact-note {
+    max-width: 400px;
+    margin-top: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-left: 3px solid var(--palette-accent);
+  }
+
+  .contact-note strong {
+    color: var(--palette-accent);
+    font-size: 13px;
+  }
+
+  .contact-note span {
+    font-size: 12px;
+  }
+
+  .contact-form {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form label {
+    margin: 0 0 7px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    color: var(--palette-text);
+    background: var(--palette-base);
+    border: 1px solid var(--palette-border);
+    border-radius: 0;
+    outline: none;
+    font-size: 13px;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--palette-accent);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .form-note {
+    margin: 10px 0 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 680px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+  }
+</style>

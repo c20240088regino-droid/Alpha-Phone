@@ -1,0 +1,253 @@
+:root {
+  color-scheme: dark;
+  --palette-base: #080808;
+  --palette-secondary: #111;
+  --palette-surface: #171717;
+  --palette-text: #f7f7f7;
+  --palette-muted: #a3a3a3;
+  --palette-border: #ffffff1a;
+  --palette-accent: #ff6a00;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--palette-text);
+  background: var(--palette-base);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.light-mode {
+  color-scheme: light;
+  --palette-base: #f5f5f5;
+  --palette-secondary: #e9e9e9;
+  --palette-surface: #fff;
+  --palette-text: #171717;
+  --palette-muted: #5b5b5b;
+  --palette-border: #1717171a;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#progressBar {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 20;
+  width: 100%;
+  height: 3px;
+  background: var(--palette-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.text-fire,
+.product-price {
+  color: var(--palette-accent);
+}
+
+.muted-text {
+  color: var(--palette-muted);
+}
+
+.shop-button,
+.outline-button {
+  min-height: 42px;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--palette-accent);
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.shop-button {
+  color: #111;
+  background: var(--palette-accent);
+}
+
+.shop-button:hover {
+  color: #111;
+  background: #ff8a32;
+  transform: translateY(-1px);
+}
+
+.outline-button {
+  color: var(--palette-accent);
+  background: transparent;
+}
+
+.outline-button:hover {
+  background: #ff6a0018;
+}
+
+.dark-panel {
+  background: var(--palette-surface);
+  border: 1px solid var(--palette-border);
+}
+
+.phone-art {
+  position: relative;
+  flex: 0 0 auto;
+  width: 96px;
+  height: 178px;
+  padding: 5px;
+  border: 4px solid #575757;
+  border-radius: 22px;
+  background: #080808;
+  box-shadow: 0 15px 32px #0008;
+  transition: transform 0.25s ease;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #777, #343434 55%, #151515 82%, #ff6a00);
+}
+
+.screen-blue {
+  background: linear-gradient(145deg, #5e7787, #25313a 58%, #101416 82%, #ff6a00);
+}
+
+.screen-purple {
+  background: linear-gradient(145deg, #76647c, #3c303f 58%, #171318 82%, #ff6a00);
+}
+
+.screen-green {
+  background: linear-gradient(145deg, #68806c, #2d3b31 58%, #111712 82%, #ff6a00);
+}
+
+.product-photo {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.product-photo.is-loaded {
+  opacity: 1;
+  visibility: visible;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.section-pad {
+  padding: 64px 0;
+}
+
+.section-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--palette-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .phone-art {
+    width: 78px;
+    height: 150px;
+  }
+
+  .phone-large {
+    width: 94px;
+    height: 184px;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+
+  .section-pad {
+    padding: 50px 0;
+  }
+
+  .section-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .phone-art {
+    width: 68px;
+    height: 132px;
+  }
+
+  .phone-large {
+    width: 82px;
+    height: 160px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

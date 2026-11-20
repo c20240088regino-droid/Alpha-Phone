@@ -1,16 +1,43 @@
 ---
+import "../styles/global.css";
+import SiteHeader from "../components/layout/SiteHeader.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
+import AboutSection from "./index/section/About.astro";
+import ProductSection from "../components/sections/ProductSection.astro";
+import ProcessSection from "./index/section/Process.astro";
+import ServicesSection from "./index/section/Services.astro";
+import ContactSection from "./index/section/Contact.astro";
+import SiteFooter from "../components/layout/SiteFooter.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#080808" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Shop Alpha Phone smartphones and accessories. Find a simple, reliable phone for everyday life."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Alpha Phone | Mobile shop</title>
+  </head>
+  <body>
+    <div id="progressBar" aria-hidden="true"></div>
+    <SiteHeader />
+    <main>
+      <HeroSection />
+      <AboutSection />
+      <ProductSection />
+      <ProcessSection />
+      <ServicesSection />
+      <ContactSection />
+    </main>
+    <SiteFooter />
+    <script>
+      import "../scripts/storefront";
+    </script>
+  </body>
 </html>

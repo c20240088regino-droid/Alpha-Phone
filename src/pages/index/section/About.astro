@@ -1,0 +1,86 @@
+<section id="about" class="about section-pad">
+  <div class="section-inner about-layout">
+    <div class="about-copy">
+      <p class="eyebrow text-fire">ABOUT ALPHA PHONE</p>
+      <h2>Good technology should fit your everyday.</h2>
+      <p class="muted-text">
+        Choosing a phone can be simple. Alpha Phone brings together clear product
+        details and practical options to help you find a device that suits your
+        needs and budget.
+      </p>
+    </div>
+
+    <div class="about-points">
+      <article class="dark-panel">
+        <h3>Clear choices</h3>
+        <p class="muted-text">Compare useful features without the guesswork.</p>
+      </article>
+      <article class="dark-panel">
+        <h3>Everyday value</h3>
+        <p class="muted-text">Explore options for different needs and budgets.</p>
+      </article>
+      <article class="dark-panel">
+        <h3>Helpful guidance</h3>
+        <p class="muted-text">Get in touch when you need help choosing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--palette-secondary);
+  }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .about-copy h2,
+  .about-points h3 {
+    margin: 10px 0;
+  }
+
+  .about-copy h2 {
+    max-width: 500px;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .about-copy > p:last-child {
+    max-width: 500px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-points {
+    display: grid;
+    gap: 12px;
+  }
+
+  .about-points article {
+    padding: 16px 18px;
+  }
+
+  .about-points h3 {
+    font-size: 15px;
+  }
+
+  .about-points p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 680px) {
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+</style>

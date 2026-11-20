@@ -1,0 +1,68 @@
+---
+import { products } from "../../data/products";
+import ProductCard from "./ProductCard.astro";
+---
+
+<section id="products" class="products section-pad">
+  <div class="section-inner">
+    <div class="section-heading reveal">
+      <p class="eyebrow text-fire">OUR COLLECTION</p>
+      <h2>Popular phones</h2>
+      <p class="muted-text">Find a phone that fits your needs and budget.</p>
+    </div>
+
+    <div class="product-grid">
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+
+    <p class="product-note muted-text">
+      Product names and prices are examples. Photos you choose are saved only in this browser.
+    </p>
+  </div>
+</section>
+
+<style>
+  .products {
+    background: var(--palette-secondary);
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .section-heading h2 {
+    margin: 10px 0;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .section-heading > p:last-child {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .product-note {
+    margin: 18px 0 0;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .product-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

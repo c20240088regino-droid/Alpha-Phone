@@ -1,0 +1,197 @@
+<section id="home" class="hero">
+  <div class="hero-layout">
+    <div id="heroText">
+      <p class="eyebrow text-fire">WELCOME TO ALPHA PHONE</p>
+      <h1>Upgrade your <span class="text-fire">everyday.</span></h1>
+      <p class="muted-text hero-description">
+        Discover smartphones for every budget. Find your next device, browse
+        useful accessories, and get help choosing the right phone.
+      </p>
+      <div class="hero-actions">
+        <a class="shop-button" href="#products">Shop phones <span aria-hidden="true">→</span></a>
+        <a class="outline-button" href="#contact">Contact us</a>
+      </div>
+      <button id="replayIntro" class="replay-button" type="button">↻ Replay intro</button>
+    </div>
+
+    <div id="heroPhones" class="hero-phones dark-panel" aria-label="Alpha Phone logo">
+      <img
+        class="hero-photo"
+        src="/alpha-phone-mark.png"
+        alt="Alpha Phone logo"
+      />
+      <div class="phone-row" aria-hidden="true">
+        <div class="phone-art phone-small phone-tilt-left"><div class="phone-screen screen-blue"></div></div>
+        <div class="phone-art phone-large phone-tilt-center"><div class="phone-screen"></div></div>
+        <div class="phone-art phone-small phone-tilt-right"><div class="phone-screen screen-purple"></div></div>
+      </div>
+      <span class="hero-caption">A better fit for every day.</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--palette-base);
+  }
+
+  .hero-layout {
+    width: min(1120px, 100%);
+    min-height: 480px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 54px;
+  }
+
+  h1 {
+    max-width: 520px;
+    margin: 14px 0;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+    font-weight: 900;
+  }
+
+  .hero-description {
+    max-width: 490px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .replay-button {
+    margin-top: 19px;
+    padding: 4px 0;
+    color: var(--palette-muted);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--palette-accent);
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .replay-button:hover {
+    color: var(--palette-accent);
+  }
+
+  .hero-phones {
+    position: relative;
+    min-height: 310px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at center, #ff6a001a, transparent 62%),
+      var(--palette-surface);
+  }
+
+  .phone-row {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px, 2vw, 22px);
+    transition: opacity 0.2s ease;
+  }
+
+  .hero-phones:hover .phone-art {
+    transform: translateY(-5px);
+  }
+
+  .phone-large {
+    z-index: 1;
+    width: 112px;
+    height: 208px;
+  }
+
+  .phone-tilt-left {
+    transform: rotate(-12deg);
+  }
+
+  .phone-tilt-center {
+    transform: rotate(2deg);
+  }
+
+  .phone-tilt-right {
+    transform: rotate(12deg);
+  }
+
+  .hero-photo {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: min(78%, 500px);
+    height: 78%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    filter: brightness(0) invert(1) drop-shadow(0 16px 30px #ff6a0066);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .hero-photo.is-loaded {
+    opacity: 1;
+  }
+
+  .hero-phones.has-custom-image .phone-row {
+    opacity: 0;
+  }
+
+  .hero-caption {
+    position: absolute;
+    z-index: 3;
+    right: 14px;
+    bottom: 12px;
+    color: #fff;
+    font-size: 11px;
+    text-shadow: 0 1px 5px #000;
+  }
+
+  @media (max-width: 900px) {
+    .hero-layout {
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .hero-layout {
+      min-height: auto;
+      padding: 50px 20px;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    h1 {
+      max-width: 500px;
+      font-size: clamp(42px, 12vw, 60px);
+    }
+
+    .hero-phones {
+      min-height: 260px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .hero-phones {
+      min-height: 230px;
+    }
+
+    .phone-row {
+      gap: 3px;
+      padding: 12px;
+    }
+  }
+</style>

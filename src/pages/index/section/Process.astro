@@ -1,0 +1,87 @@
+<section id="process" class="process section-pad">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow text-fire">HOW IT WORKS</p>
+      <h2>Find the right phone in three steps.</h2>
+      <p class="muted-text">A straightforward way to start your next upgrade.</p>
+    </div>
+
+    <ol class="process-grid">
+      <li class="dark-panel">
+        <span class="step-number">01</span>
+        <h3>Explore</h3>
+        <p class="muted-text">Browse the collection and discover available options.</p>
+      </li>
+      <li class="dark-panel">
+        <span class="step-number">02</span>
+        <h3>Compare</h3>
+        <p class="muted-text">Review the details and choose what matters to you.</p>
+      </li>
+      <li class="dark-panel">
+        <span class="step-number">03</span>
+        <h3>Get in touch</h3>
+        <p class="muted-text">Send an inquiry if you have questions about a device.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<style>
+  .process {
+    border-top: 1px solid var(--palette-border);
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .section-heading h2 {
+    margin: 10px 0;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .section-heading > p:last-child {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .process-grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    list-style: none;
+  }
+
+  .process-grid li {
+    padding: 22px;
+  }
+
+  .step-number {
+    color: var(--palette-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .process-grid h3 {
+    margin: 18px 0 8px;
+    font-size: 17px;
+  }
+
+  .process-grid p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 680px) {
+    .process-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+</style>

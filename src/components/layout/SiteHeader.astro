@@ -1,0 +1,145 @@
+<header class="site-header">
+  <nav class="navigation" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Alpha Phone home">
+      <img src="/alpha-phone-mark.png" alt="" width="1071" height="666" />
+      <span class="brand-copy" aria-hidden="true">
+        <strong>ALPHA PHONE</strong>
+        <small>MOBILE STORE</small>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Phones</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to light mode"
+    >Light Mode</button>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .navigation {
+    width: min(1120px, 100%);
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .brand img {
+    display: block;
+    width: 60px;
+    height: auto;
+  }
+
+  .brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 10px;
+    color: #171717;
+    text-decoration: none;
+  }
+
+  .brand-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1;
+  }
+
+  .brand-copy strong {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+  }
+
+  .brand-copy small {
+    color: #d95600;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: var(--palette-accent);
+  }
+
+  .theme-toggle {
+    padding: 9px 12px;
+    color: #d95600;
+    background: #fff;
+    border: 1px solid #ff6a00;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .theme-toggle:hover {
+    color: #111;
+    background: #ff6a00;
+  }
+
+  @media (max-width: 680px) {
+    .navigation {
+      padding: 13px 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 48px;
+    }
+
+    .brand {
+      gap: 8px;
+    }
+
+    .brand-copy strong {
+      font-size: 12px;
+    }
+
+    .nav-links {
+      order: 3;
+      width: 100%;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .theme-toggle {
+      margin-left: auto;
+    }
+  }
+</style>

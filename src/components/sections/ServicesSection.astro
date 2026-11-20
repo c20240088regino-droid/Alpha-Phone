@@ -1,0 +1,84 @@
+<section id="services" class="services section-pad">
+  <div class="section-inner">
+    <div class="section-heading reveal">
+      <p class="eyebrow text-fire">HERE TO HELP</p>
+      <h2>More than just phones.</h2>
+      <p class="muted-text">Friendly help before and after your purchase.</p>
+    </div>
+    <div class="service-grid">
+      <article class="dark-panel reveal">
+        <span class="service-icon" aria-hidden="true">01</span>
+        <h3>Find your phone</h3>
+        <p class="muted-text">Compare options and choose a phone that suits your day-to-day needs.</p>
+      </article>
+      <article class="dark-panel reveal">
+        <span class="service-icon" aria-hidden="true">02</span>
+        <h3>Useful accessories</h3>
+        <p class="muted-text">Ask us about cases, chargers, screen protectors, and more.</p>
+      </article>
+      <article class="dark-panel reveal">
+        <span class="service-icon" aria-hidden="true">03</span>
+        <h3>Customer support</h3>
+        <p class="muted-text">Get help with product questions and choosing your next upgrade.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    border-top: 1px solid var(--palette-border);
+    border-bottom: 1px solid var(--palette-border);
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .section-heading h2 {
+    margin: 10px 0;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .section-heading > p:last-child {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .service-grid article {
+    padding: 22px;
+  }
+
+  .service-icon {
+    color: var(--palette-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .service-grid h3 {
+    margin: 18px 0 8px;
+    font-size: 17px;
+  }
+
+  .service-grid p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 680px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+</style>

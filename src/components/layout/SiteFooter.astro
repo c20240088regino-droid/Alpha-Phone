@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  <a class="footer-brand" href="#home">ALPHA PHONE</a>
+  <p>Thoughtful technology for every day.</p>
+  <p>© <span id="year"></span> Alpha Phone. All rights reserved.</p>
+  <a class="back-to-top" href="#home">Back to top ↑</a>
+</footer>
+
+<style>
+  .site-footer {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid var(--palette-border);
+    font-size: 12px;
+  }
+
+  .site-footer p {
+    margin: 0;
+    color: var(--palette-muted);
+  }
+
+  .site-footer a {
+    text-decoration: none;
+  }
+
+  .footer-brand {
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  .back-to-top {
+    color: var(--palette-muted);
+  }
+
+  .site-footer a:hover {
+    color: var(--palette-accent);
+  }
+
+  @media (max-width: 680px) {
+    .site-footer {
+      padding: 20px;
+    }
+  }
+</style>
