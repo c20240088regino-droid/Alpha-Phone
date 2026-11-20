@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const productPhotos = document.querySelectorAll<HTMLImageElement>(".product-photo");
@@ -98,90 +98,11 @@ if (heroPhoto.complete && heroPhoto.naturalWidth > 0) {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
-const html = document.documentElement;
-const progressBar = document.getElementById("progressBar");
 
-if (!(themeToggle instanceof HTMLButtonElement) || !progressBar) {
-  throw new Error("The theme and scroll controls are required.");
-}
 
-function updateThemeButton() {
-  const isDark = !body.classList.contains("light-mode");
-  html.classList.toggle("dark", isDark);
-  themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-  themeToggle.setAttribute(
-    "aria-label",
-    isDark ? "Switch to light mode" : "Switch to dark mode",
-  );
-  document.querySelector('meta[name="theme-color"]')?.setAttribute(
-    "content",
-    isDark ? "#080808" : "#f5f5f5",
-  );
-}
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
-  updateThemeButton();
-  gsap.fromTo(themeToggle, { rotation: 0 }, {
-    rotation: 360,
-    duration: 0.5,
-    ease: "power2.inOut",
-  });
-});
-updateThemeButton();
 
-const intro = gsap.timeline({
-  paused: true,
-  defaults: { duration: 0.6, ease: "power2.out" },
-});
 
-intro
-  .from("#heroText .text-fire", { opacity: 0, y: 15, duration: 0.4 })
-  .from("#heroText h1", { opacity: 0, y: 35, duration: 0.7 }, "-=0.2")
-  .from("#heroText > p.muted-text", { opacity: 0, y: 20 }, "-=0.3")
-  .from("#heroText a, #replayIntro", { opacity: 0, y: 15, stagger: 0.12 }, "-=0.25")
-  .from("#heroPhones", { opacity: 0, y: 35, duration: 0.6 }, "-=0.4");
-
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-if (reduceMotion.matches) {
-  intro.progress(1).pause();
-} else {
-  intro.play();
-}
-
-document.getElementById("replayIntro")?.addEventListener("click", () => {
-  if (!reduceMotion.matches) intro.restart();
-});
-
-const motionSettings = gsap.matchMedia();
-motionSettings.add("(prefers-reduced-motion: no-preference)", () => {
-  gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
-    gsap.from(element, {
-      opacity: 0,
-      y: 25,
-      duration: 0.6,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: element,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-
-  gsap.to(progressBar, {
-    scaleX: 1,
-    ease: "none",
-    scrollTrigger: {
-      trigger: document.documentElement,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 0.2,
-    },
-  });
-});
 
 const contactForm = document.getElementById("contactForm");
 if (!(contactForm instanceof HTMLFormElement)) {
